@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Travel Plus</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        #Form,#Form2{display: none};
+    </style>
+    <script src="index.js"></script>
+
+</head>
+<body>
+    <div id= travelForm>
+        <h1>Booking Details</h1>
+        <form name="myform" onsubmit="return validateForm()" action="newHTML.html" method="post">
+            <input type="radio" name="tripType" id="oneWay" value="One Way" onclick=" checkButton()">One Way
+            <input type="radio" name="tripType" id="roundTrip" value="Round Trip" onclick=" checkButton()" >Round Trip<br><br>
+
+            <h3 id="disp" style= "color:green">               </h3>
+            <h4 id="error" style= "color:red">                </h4>
+
+            <div id="Form">
+                From: <input type="text" name="destination" id="textField" pattern="[a-zA-Z]{2,}" title="Please fill in a destination">
+                To: <input type="text" name="destination" id="textField" pattern="[a-zA-Z]{2,}" title="Please fill in a destination"><br><br>
+                Departure: <input type="date" name="mydate" id="mydate1" min="2022-11-14">
+
+                <h2>Number of Passengers</h2>
+                Adults: <input type="text" name="numpass" id="numpass" pattern="[1-9]{1,}" title="How many traveling adults?">
+                Childrens: <input type="text" name="numpass" id="numpass" pattern="[0-9]{1,}" title="How many traveling childrens?"><br><br>
+
+                <h3>Passenger 1 details</h3>
+                Name: <input type="text" name="pass1" id="textField" pattern="[a-zA-Z]{5,}" title="Please input name">
+                Age: <input type="text" name="myage" id="textField" pattern="[1-9]{1,}" title="Please input age">
+                Gender:
+                <input type="radio" name="p1" id="Male" value="Male" onclick=" checkButton()">Male
+                <input type="radio" name="p1" id="Female" value="Female" onclick=" checkButton()" >Female<br><br>
+                <h3>Passenger 2 details</h3>
+                Name: <input type="text" name="myname" id="newmine" pattern="[a-zA-Z]{5,}" title="Please input name">
+                Age: <input type="text" name="myage" id="newmine" pattern="[1-9]{1,}" title="Please input age">
+                Gender:
+                <input type="radio" name="p2" id="Male" value="Male" onclick=" checkButton()">Male
+                <input type="radio" name="p2" id="Female" value="Female" onclick=" checkButton()" >Female<br><br>
+                <h3>Passenger 3 details</h3>
+                Name: <input type="text" name="myname" id="newmine" pattern="[a-zA-Z]{5,}" title="Please input name">
+                Age: <input type="text" name="myage" id="newmine" pattern="[1-9]{1,}" title="Please input age">
+                Gender:
+                <input type="radio" name="p3" id="Male" value="Male" onclick=" checkButton()">Male
+                <input type="radio" name="p3" id="Female" value="Female" onclick=" checkButton()" >Female<br><br><br>
+
+                <label for="foodType">Dietary Option:</label>
+                <select id="foodType" name="foodType">
+                    <option value="regular">regular</option>
+                    <option value="vegan">vegan</option>
+                    <option value="glutenFree">gluten free</option>
+                    </select>
+                <label for="foodType">Travel class:</label>
+                <select id="foodType" name="foodType">
+                    <option value="firstclass">first class</option>
+                    <option value="business">business</option>
+                    <option value="economy">economy</option>
+                    </select>
+                
+                <h3>Payment Details</h3>
+                Full Name: <input type="text" name="myname" id="newmine" pattern="[a-zA-Z]{1,}" title="Please input full name">
+                Email: <input type="text" name="myemail" id="newmine" >
+                Mobile: <input type="number" name="mobile" id="newmine"><br><br>
+
+                <input type="submit" value="Start Your Today!">
+            </div>
+            <div id="Form2">
+                From: <input type="text" name="destination" id="textField" pattern="[a-zA-Z]{2,}" title="Please fill in a destination">
+                To: <input type="text" name="destination" id="textField" pattern="[a-zA-Z]{2,}" title="Please fill in a destination"><br><br>
+                Departure: <input type="date" name="mydate" id="mydate1" min="2022-11-14">
+                Return Date: <input type="date" name="mydate" id="mydate" min="2022-11-14">
+
+                <h2>Number of Passengers</h2>
+                Adults: <input type="text" name="numpass" id="numpass" pattern="[1-9]{1,}" title="How many traveling adults?">
+                Childrens: <input type="text" name="numpass" id="numpass" pattern="[0-9]{1,}" title="How many traveling childrens?"><br><br>
+
+                <h3>Passenger 1 details</h3>
+                Name: <input type="text" name="pass1" id="textField" pattern="[a-zA-Z]{5,}" title="Please input name">
+                Age: <input type="text" name="myage" id="textField" pattern="[1-9]{1,}" title="Please input age">
+                Gender:
+                <input type="radio" name="p1" id="Male" value="Male" onclick=" checkButton()">Male
+                <input type="radio" name="p1" id="Female" value="Female" onclick=" checkButton()" >Female<br><br>
+                <h3>Passenger 2 details</h3>
+                Name: <input type="text" name="myname" id="newmine" pattern="[a-zA-Z]{5,}" title="Please input name">
+                Age: <input type="text" name="myage" id="newmine" pattern="[1-9]{1,}" title="Please input age">
+                Gender:
+                <input type="radio" name="p2" id="Male" value="Male" onclick=" checkButton()">Male
+                <input type="radio" name="p2" id="Female" value="Female" onclick=" checkButton()" >Female<br><br>
+                <h3>Passenger 3 details</h3>
+                Name: <input type="text" name="myname" id="newmine" pattern="[a-zA-Z]{5,}" title="Please input name">
+                Age: <input type="text" name="myage" id="newmine" pattern="[1-9]{1,}" title="Please input age">
+                Gender:
+                <input type="radio" name="p3" id="Male" value="Male" onclick=" checkButton()">Male
+                <input type="radio" name="p3" id="Female" value="Female" onclick=" checkButton()" >Female<br><br><br>
+
+                <label for="foodType">Dietary Option:</label>
+                <select id="foodType" name="foodType">
+                    <option value="regular">regular</option>
+                    <option value="vegan">vegan</option>
+                    <option value="glutenFree">gluten free</option>
+                    </select>
+                <label for="foodType">Travel class:</label>
+                <select id="foodType" name="foodType">
+                    <option value="firstclass">first class</option>
+                    <option value="business">business</option>
+                    <option value="economy">economy</option>
+                    </select>
+                
+                <h3>Payment Details</h3>
+                Full Name: <input type="text" name="myname" id="newmine" pattern="[a-zA-Z]{1,}" title="Please input full name">
+                Email: <input type="text" name="myemail" id="newmine" >
+                Mobile: <input type="number" name="mobile" id="newmine"><br><br>
+
+                <input type="submit" value="Start Your Today!">
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>
